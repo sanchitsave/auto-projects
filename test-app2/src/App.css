@@ -1,0 +1,61 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f8f8f6;
+}
+
+.App {
+  max-width: 620px;
+  margin: 36px auto;
+  background: #fff;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.10);
+  border-radius: 10px;
+  padding-bottom: 40px;
+}
+
+.App-header {
+  background-color: #3e2723;
+  padding: 32px 0 10px 0;
+  border-radius: 10px 10px 0 0;
+  text-align: center;
+}
+.App-header h1 {
+  margin: 0;
+  color: #ffe082;
+  font-size: 2.6em;
+}
+.subtitle {
+  color: #fffde7;
+  margin-top: 6px;
+  font-size: 1.05em;
+  letter-spacing: 0.5px;
+}
+.menu-container {
+  padding: 24px 36px;
+}
+.menu-category {
+  margin-bottom: 32px;
+}
+.menu-category h2 {
+  color: #795548;
+  border-bottom: 1px solid #ffe082;
+  padding-bottom: 4px;
+  margin-bottom: 18px;
+  font-size: 1.35em;
+  font-weight: 600;
+}
+.menu-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 9px 0;
+  border-bottom: 1px dashed #d7ccc8;
+  font-size: 1.12em;
+}
+.item-name {
+  color: #3e2723;
+}
+.item-price {
+  color: #8d6e63;
+  font-weight: 600;
+}
