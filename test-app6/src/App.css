@@ -1,0 +1,42 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f8fafc;
+}
+
+.app-container {
+  max-width: 400px;
+  margin: 40px auto;
+  background: #fff;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.09);
+  border-radius: 12px;
+  padding: 32px 24px;
+  text-align: center;
+}
+
+h1 {
+  color: #517fa4;
+  margin-bottom: 16px;
+}
+
+.menu-list {
+  list-style: none;
+  padding: 0;
+  margin: 25px 0 0 0;
+}
+
+.menu-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 0;
+  border-bottom: 1px solid #ececec;
+}
+
+.menu-item:last-child {
+  border-bottom: none;
+}
+
+.price {
+  color: #4bb543;
+  font-weight: 600;
+}
