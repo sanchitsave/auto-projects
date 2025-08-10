@@ -1,4 +1,4 @@
-name: Deploy React App to Netlify
+name: Deploy React Apps to Netlify
 
 on:
   push:
@@ -12,39 +12,47 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      # Step 1 – Checkout repo with enough history to compare commits
       - name: Checkout repository
         uses: actions/checkout@v3
+        with:
+          fetch-depth: 2
 
+      # Step 2 – Set up Node.js
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
           node-version: 18
 
-      - name: Detect changed app folder
+      # Step 3 – Detect all changed test-app folders
+      - name: Detect changed app folders
         id: detect
         run: |
-          CHANGED_DIR=$(git diff --name-only HEAD~1 HEAD | grep -o 'test-app[^/]*' | sort -u | head -n 1)
-          echo "changed_folder=$CHANGED_DIR" >> $GITHUB_OUTPUT
-          echo "Detected folder: $CHANGED_DIR"
+          CHANGED_DIRS=$(git diff --name-only HEAD~1 HEAD | grep -o '^test-app[^/]*' | sort -u)
+          if [ -z "$CHANGED_DIRS" ]; then
+            echo "No changed test-app folders detected."
+            exit 1
+          fi
+          echo "changed_folders=$CHANGED_DIRS" >> $GITHUB_OUTPUT
+          echo "Detected folders: $CHANGED_DIRS"
 
-      - name: Install dependencies
+      # Step 4 – Deploy each changed folder to Netlify
+      - name: Deploy each changed folder
         run: |
-          cd ${{ steps.detect.outputs.changed_folder }}
-          npm install
-
-      - name: Build project
-        run: |
-          cd ${{ steps.detect.outputs.changed_folder }}
-          npm run build
-
-      - name: Deploy to Netlify
-        run: |
-          npm install -g netlify-cli
-          cd ${{ steps.detect.outputs.changed_folder }}
-          netlify deploy \
-            --dir=build \
-            --prod \
-            --auth=$NETLIFY_AUTH_TOKEN \
-            --site=$(netlify sites:create --name "${{ steps.detect.outputs.changed_folder }}-$(date +%s)" --json | jq -r '.site_id')
+          npm install -g netlify-cli jq
+          for folder in ${{ steps.detect.outputs.changed_folders }}; do
+            echo "📦 Installing dependencies for $folder"
+            cd "$folder"
+            npm install
+            npm run build
+            echo "🚀 Deploying $folder to Netlify..."
+            SITE_ID=$(netlify sites:create --name "${folder}-$(date +%s)" --json | jq -r '.site_id')
+            netlify deploy \
+              --dir=build \
+              --prod \
+              --auth=$NETLIFY_AUTH_TOKEN \
+              --site=$SITE_ID
+            cd ..
+          done
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
