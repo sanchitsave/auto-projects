@@ -1,0 +1,68 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  background: #f4f4f4;
+  color: #222;
+}
+
+.app-container {
+  max-width: 700px;
+  margin: 40px auto;
+  background: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.15);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.category {
+  margin-bottom: 2rem;
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #eee;
+}
+
+.menu-item:last-child {
+  border-bottom: none;
+}
+
+.menu-item input[type="text"] {
+  font-size: 1rem;
+  margin-right: 0.5rem;
+}
+
+button {
+  margin-left: 0.3rem;
+  padding: 0.25rem 0.6rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 4px;
+  background: #1864ab;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+button:hover, button:focus {
+  background: #0b3553;
+}
+
+.add-item-form {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.add-item-form input, .add-item-form select {
+  font-size: 1rem;
+  padding: 0.3rem;
+}
