@@ -12,11 +12,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # Step 1 – Checkout repo with enough history to compare commits
+      # Step 1 – Checkout repository
       - name: Checkout repository
         uses: actions/checkout@v3
         with:
-          fetch-depth: 2   # Needed so HEAD^ exists for git diff
+          fetch-depth: 0   # Fetch all history so diff works reliably
 
       # Step 2 – Set up Node.js
       - name: Set up Node.js
@@ -28,7 +28,7 @@ jobs:
       - name: Detect changed app folders
         id: detect
         run: |
-          CHANGED_DIRS=$(git diff --name-only HEAD^ HEAD | grep '^test-app' | cut -d/ -f1 | sort -u)
+          CHANGED_DIRS=$(git diff --name-only ${{ github.event.before }} ${{ github.sha }} | grep '^test-app' | cut -d/ -f1 | sort -u)
           if [ -z "$CHANGED_DIRS" ]; then
             echo "No changed test-app folders detected."
             exit 1
