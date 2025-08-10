@@ -1,17 +1,28 @@
 import React from 'react';
-import Header from './components/Header';
-import Footer from './components/Footer';
 import './App.css';
+import PlanePrices from './components/PlanePrices';
 
 function App() {
+  // Sample old data for demonstration (preserved as per instructions)
+  const oldData = [
+    { name: 'John Doe', value: 42 },
+    { name: 'Jane Smith', value: 37 },
+  ];
+
   return (
-    <div style={{ minHeight: '100vh', position: 'relative', paddingBottom: '3rem' }}>
-      <Header />
-      <main style={{ padding: '2rem 1rem 4rem 1rem' }}>
-        <h2>Main Content</h2>
-        <p>This is the main body of test-app12. Start building your app!</p>
-      </main>
-      <Footer />
+    <div className="App">
+      <h1>Welcome to Plane Info Dashboard</h1>
+      <section>
+        <h2>Old Data</h2>
+        <ul>
+          {oldData.map((item, idx) => (
+            <li key={idx}>
+              {item.name}: {item.value}
+            </li>
+          ))}
+        </ul>
+      </section>
+      <PlanePrices />
     </div>
   );
 }
