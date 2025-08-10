@@ -5,7 +5,7 @@ on:
     branches:
       - main
     paths:
-      - 'testapp*/**'
+      - 'test-app*/**'
 
 jobs:
   deploy:
@@ -23,7 +23,7 @@ jobs:
       - name: Detect changed app folder
         id: detect
         run: |
-          CHANGED_DIR=$(git diff --name-only HEAD~1 HEAD | grep -o 'testapp[^/]*' | sort -u | head -n 1)
+          CHANGED_DIR=$(git diff --name-only HEAD~1 HEAD | grep -o 'test-app[^/]*' | sort -u | head -n 1)
           echo "changed_folder=$CHANGED_DIR" >> $GITHUB_OUTPUT
           echo "Detected folder: $CHANGED_DIR"
 
