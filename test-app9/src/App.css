@@ -1,0 +1,73 @@
+body {
+  background: #f7f4fa;
+  font-family: 'Segoe UI', 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.App {
+  max-width: 900px;
+  margin: 30px auto;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 0 10px 3px #efe0fa70;
+  overflow: hidden;
+}
+
+.app-header {
+  background: #c084fc;
+  color: #fff;
+  padding: 32px 0;
+  text-align: center;
+}
+
+.flower-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+  justify-content: center;
+  padding: 32px;
+}
+
+.flower-item {
+  background: #fdf6fb;
+  border-radius: 12px;
+  box-shadow: 0px 1px 6px #e7befa45;
+  overflow: hidden;
+  width: 220px;
+  transition: box-shadow .2s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.flower-item:hover {
+  box-shadow: 0px 4px 12px #ffaaea55;
+}
+
+.flower-image {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+}
+
+.flower-content {
+  padding: 16px;
+  text-align: left;
+}
+
+.flower-content h2 {
+  margin: 0 0 8px 0;
+  font-size: 1.25em;
+  color: #a21caf;
+}
+
+.price {
+  margin-top: 10px;
+  font-weight: 600;
+  color: #9333ea;
+}
+
+.description {
+  color: #654983;
+}
