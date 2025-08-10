@@ -1,35 +1,34 @@
 import React from 'react';
-import './PlanePrices.css';
 
-const samplePlanes = [
-  { id: 1, model: 'Boeing 747', price: 379000000 },
-  { id: 2, model: 'Airbus A380', price: 445000000 },
-  { id: 3, model: 'Cessna 172', price: 370000 },
-  { id: 4, model: 'Gulfstream G650', price: 65000000 },
+const samplePlanePrices = [
+  { model: 'Boeing 737', price: '$90M' },
+  { model: 'Airbus A320', price: '$100M' },
+  { model: 'Bombardier CRJ900', price: '$48M' },
+  { model: 'Embraer E190', price: '$52M' }
 ];
 
-const PlanePrices = () => {
+function PlanePrices() {
   return (
-    <div className="plane-prices">
+    <div style={{ margin: '2rem 0' }}>
       <h2>Plane Prices</h2>
-      <table>
+      <table style={{ borderCollapse: 'collapse', width: '100%' }}>
         <thead>
           <tr>
-            <th>Model</th>
-            <th>Price (USD)</th>
+            <th style={{ border: '1px solid #ddd', padding: '8px' }}>Model</th>
+            <th style={{ border: '1px solid #ddd', padding: '8px' }}>Price</th>
           </tr>
         </thead>
         <tbody>
-          {samplePlanes.map((plane) => (
-            <tr key={plane.id}>
-              <td>{plane.model}</td>
-              <td>${plane.price.toLocaleString()}</td>
+          {samplePlanePrices.map((plane, idx) => (
+            <tr key={plane.model}>
+              <td style={{ border: '1px solid #ddd', padding: '8px' }}>{plane.model}</td>
+              <td style={{ border: '1px solid #ddd', padding: '8px' }}>{plane.price}</td>
             </tr>
           ))}
         </tbody>
       </table>
     </div>
   );
-};
+}
 
 export default PlanePrices;
