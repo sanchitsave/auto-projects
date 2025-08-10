@@ -1,11 +1,10 @@
 import React from 'react';
+import './Header.css';
 
-const Header = () => {
-  return (
-    <header style={{ background: '#282c34', padding: '1rem', color: 'white' }}>
-      <h1>Welcome to the Output Page</h1>
-    </header>
-  );
-};
+const Header = () => (
+  <header className="header">
+    <h1>Welcome to Test App 9</h1>
+  </header>
+);
 
 export default Header;
