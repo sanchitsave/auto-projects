@@ -11,7 +11,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Welcome to Plane Infsadfao Dashbssssoard</h1>
+      <h1>Welcome to Plane Infsasdasadfao Dashbssssoard</h1>
       <section>
         <h2>Old Data</h2>
         <ul>
