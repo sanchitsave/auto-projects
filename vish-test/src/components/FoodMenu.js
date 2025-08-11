@@ -11,12 +11,20 @@ const menuItems = [
 const FoodMenu = () => {
   return (
     <section className="food-menu">
-      <h2>Our Menu</h2>
-      <ul>
+      <div className="food-menu-header">
+        <h2 className="menu-title">Our Menu</h2>
+        <p className="menu-subtitle">Fresh. Delicious. Made with Passion.</p>
+      </div>
+      <ul className="food-menu-list">
         {menuItems.map(item => (
-          <li key={item.id} className="menu-item">
-            <h3>{item.name} <span className="price">${item.price}</span></h3>
-            <p>{item.description}</p>
+          <li key={item.id} className="menu-item card">
+            <div className="menu-item-content">
+              <h3 className="food-name">{item.name}
+                <span className="food-price">${item.price}</span>
+              </h3>
+              <p className="food-desc">{item.description}</p>
+            </div>
+            <button className="food-order-btn">Order</button>
           </li>
         ))}
       </ul>
