@@ -7,19 +7,16 @@ import Footer from "./components/Footer";
 
 function App() {
   return (
-    <div className="App app-bg-image">
+    <div className="App">
       <Header />
-      {/* Overlay menu directly, remove multiple images */}
-      <main className="app-main-content" style={{
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        flex: 1,
-        minHeight: '60vh',
-        position: 'relative',
-      }}>
-        <Menu />
-      </main>
+      <div className="app-content-layout">
+        <aside className="app-sidebar">
+          <SideNavigation />
+        </aside>
+        <main className="app-main-content">
+          <Menu />
+        </main>
+      </div>
       <Footer />
     </div>
   );
