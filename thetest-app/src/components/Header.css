@@ -1,20 +1,24 @@
 .app-header {
   width: 100%;
-  background: #375083;
+  background: linear-gradient(90deg,#28344a 0%,#23305e 100%);
   color: #fff;
-  padding: 26px 0 16px 200px;
+  padding: 28px 0 22px 0;
   font-size: 2rem;
   letter-spacing: 2px;
-  box-shadow: 0 3px 12px rgba(55,80,131,0.11);
-  position: fixed;
-  left: 0;
-  top: 0;
-  z-index: 100;
+  font-family: 'Inter', Arial, sans-serif;
+  font-weight: 700;
+  box-shadow: 0 6px 22px rgba(34,44,74,0.13);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 14px 14px 0 0;
 }
 
 @media (max-width: 600px) {
   .app-header {
-    padding-left: 30px;
+    padding-left: 8px;
+    padding-right: 8px;
     font-size: 1.1rem;
+    text-align: center;
   }
 }
