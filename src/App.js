@@ -1,7 +1,8 @@
 import React from 'react';
 import './App.css';
-import Header from 'cars-app/components/Header';
-import Footer from 'cars-app/components/Footer';
+import Header from './components/Header';
+import Footer from './components/Footer';
+// import SideNav from './components/SideNav'; // Uncomment if SideNav is needed
 
 function App() {
   return (
