@@ -1,0 +1,30 @@
+.side-nav {
+  width: 180px;
+  min-height: 100vh;
+  background: #222e3c;
+  color: #fff;
+  padding-top: 30px;
+  box-shadow: 2px 0 7px rgba(0,0,0,0.09);
+  position: fixed;
+  left: 0;
+  top: 0;
+}
+.side-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.side-nav li {
+  margin: 25px 0;
+}
+.side-nav a {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 24px;
+  display: block;
+  border-radius: 4px;
+  transition: background 0.2s;
+}
+.side-nav a:hover {
+  background: #294064;
+}
