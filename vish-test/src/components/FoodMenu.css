@@ -1,185 +1,47 @@
-.food-menu {
-  padding: 40px 6vw 80px 6vw;
-  background: linear-gradient(115deg, #f9fafc 70%, #ffe8b3 100%);
-  min-height: 60vh;
-  border-radius: 20px;
-  max-width: 800px;
-  margin: 40px auto;
-  box-shadow: 0 6px 40px rgba(0,0,0,0.09);
-  animation: foodMenuFadeIn 1s cubic-bezier(.5,.1,.5,1.1);
-}
-
-@keyframes foodMenuFadeIn {
-  from {
-    filter: blur(12px);
-    opacity: 0;
-    transform: translateY(36px);
-  }
-  to {
-    filter: none;
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.food-menu-header {
-  text-align: center;
-  margin-bottom: 42px;
-}
-
-.menu-title {
-  font-size: 2.3rem;
-  font-weight: 800;
-  background: linear-gradient(90deg, #ffe259 10%, #faa751 90%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  text-fill-color: transparent;
-  margin-bottom: 7px;
-  letter-spacing: 2px;
-  position: relative;
-  display: inline-block;
-  animation: animated-fade-in 0.9s 0.18s backwards;
-}
-
-.menu-subtitle {
-  color: #b9974f;
-  font-size: 1.13rem;
-  font-weight: 600;
-  margin-bottom: 12px;
-  letter-spacing: 0.8px;
-  opacity: 0.95;
-  animation: animated-fade-in 0.7s 0.36s backwards;
-}
-
-.food-menu-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
-  gap: 32px 32px;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.menu-item.card {
-  background: #fffef9;
-  border-radius: 18px;
-  box-shadow: 0 6px 24px rgba(236, 203, 80, 0.12);
-  padding: 30px 22px 24px 22px;
-  text-align: center;
-  position: relative;
-  cursor: pointer;
-  will-change: transform, box-shadow;
-  transition: box-shadow 0.35s cubic-bezier(.5,.14,.46,1.1), transform 0.22s cubic-bezier(.61,-0.01,.51,1.01);
-  animation: menuEntry 0.7s cubic-bezier(.37,1.39,.46,.84) both;
-}
-@keyframes menuEntry {
-  from {
-    opacity: 0;
-    transform: scale(0.94) translateY(24px);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1) translateY(0);
-  }
-}
-
-.menu-item.card:hover {
-  box-shadow: 0 14px 38px rgba(255,200,34,0.20), 0 2px 6px rgba(180,150,76,0.10);
-  transform: translateY(-8px) scale(1.025);
-  z-index: 2;
-}
-
-.menu-item-content {
-  margin-bottom: 18px;  
-}
-.menu-item-header {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 13px;
-}
-.food-name {
-  font-size: 1.22rem;
-  font-weight: 700;
-  color: #e59b23;
-  margin-bottom: 3px;
-  letter-spacing: 0.7px;
-}
-.food-price {
-  background: #ffe259;
-  color: #222;
-  padding: 6px 15px;
-  border-radius: 13px;
-  font-weight: 700;
-  font-size: 1.05rem;
-  letter-spacing: 1px;
-  margin-left: 14px;
-  box-shadow: 0 2px 8px rgba(238,216,72,0.13);
-  transition: background 0.33s cubic-bezier(.5,.16,.41,1.18);
-}
-.food-item.card:hover .food-price {
-  background: #fffbe7;
-}
-.food-desc {
-  font-size: 1.07rem;
-  color: #746a5d;
-  margin-bottom: 16px;
-  line-height: 1.43;
-}
-.food-order-btn {
-  background: linear-gradient(90deg, #ffe259, #faa751, #ffe259);
-  color: #fff;
+LmZvb2QtY2F0LWJ0bi {
+  background: linear-gradient(90deg, #ffe259 0%, #faa751 100%);
+  color: #4b3621;
   border: none;
-  border-radius: 25px;
-  font-size: 1rem;
-  font-weight: 700;
-  padding: 11px 22px;
+  border-radius: 16px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0 8px 16px 0;
+  padding: 10px 20px;
   cursor: pointer;
-  outline: none;
-  box-shadow: 0 4px 18px rgba(252,193,67,0.10);
-  letter-spacing: 1px;
-  transition: background 0.25s, box-shadow 0.23s, transform 0.22s;
-  animation: btnEnter 0.5s 0.22s cubic-bezier(.37,1.39,.46,.84) both;
+  box-shadow: 0 2px 8px rgba(238, 160, 56, 0.12);
+  transition: background 0.25s,box-shadow 0.23s, transform 0.17s;
 }
-.food-order-btn:hover {
-  background: linear-gradient(90deg, #ffe259 70%, #faa751);
+
+.food-cat-btn.active,
+.food-cat-btn:focus {
+  background: linear-gradient(90deg,#f9fafc 60%, #ffe259 100%);
   color: #ad7c1c;
-  box-shadow: 0 9px 26px rgba(255,202,44,0.18);
+  box-shadow: 0 6px 18px rgba(255,230,100,0.25);
   transform: scale(1.08);
 }
-@keyframes btnEnter {
-  from {
-    opacity: 0;
-    transform: scale(0.9) translateY(12px);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1) translateY(0);
-  }
+
+.food-menu-categories {
+  margin: 24px 0 28px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 6px;
 }
 
-/* Animations for fade-in on names and descriptions */
-.animated-fade-in {
-  opacity:0;
-  animation: animated-fade-in 0.8s 0.12s forwards;
-}
-.animated-fade-in-delay {
-  opacity:0;
-  animation: animated-fade-in 0.8s 0.32s forwards;
-}
-@keyframes animated-fade-in {
-  from {
-    transform: translateY(22px);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
+.food-order-btn {
+  display: block;
+  position: absolute;
+  left: 50%;
+  bottom: 30px;
+  transform: translateX(-50%);
+  z-index: 10;
+  width: 200px;
+  background: linear-gradient(90deg, #90deg, #ffe259 70%, #faa751);
 }
 
-.btn-animated {
-  opacity: 0;
-  animation: btnEnter 0.6s 0.45s forwards;
+/* Ensure .food-menu container is relatively positioned to contain abs button */
+.food-menu {
+  position: relative;
 }
+
+/* Keep rest of existing styles below */
