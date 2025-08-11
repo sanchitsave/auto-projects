@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/auto-projects/parth-test/static/css/main.9c702363.css",
+    "main.js": "/auto-projects/parth-test/static/js/main.c93c3331.js",
+    "index.html": "/auto-projects/parth-test/index.html",
+    "main.9c702363.css.map": "/auto-projects/parth-test/static/css/main.9c702363.css.map",
+    "main.c93c3331.js.map": "/auto-projects/parth-test/static/js/main.c93c3331.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9c702363.css",
+    "static/js/main.c93c3331.js"
+  ]
+}
