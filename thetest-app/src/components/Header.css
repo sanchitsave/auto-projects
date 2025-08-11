@@ -1,0 +1,20 @@
+.app-header {
+  width: 100%;
+  background: #375083;
+  color: #fff;
+  padding: 26px 0 16px 200px;
+  font-size: 2rem;
+  letter-spacing: 2px;
+  box-shadow: 0 3px 12px rgba(55,80,131,0.11);
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 100;
+}
+
+@media (max-width: 600px) {
+  .app-header {
+    padding-left: 30px;
+    font-size: 1.1rem;
+  }
+}
