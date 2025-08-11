@@ -1,11 +1,10 @@
 import React from 'react';
-import './App.css';
-import Textbox from './Textbox';
 
 function App() {
   return (
     <div className="App">
-      <Textbox />
+      {/* Existing content */}
+      <button>Click me</button>
     </div>
   );
 }
