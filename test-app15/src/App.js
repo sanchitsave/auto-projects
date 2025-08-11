@@ -10,6 +10,7 @@ function App() {
     <div className="App">
       {/* <Header /> */}
       <h1>Welcome to My React App</h1>
+      <button>Click Me</button>
       {/* <Footer /> */}
     </div>
   );
