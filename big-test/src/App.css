@@ -12,12 +12,47 @@ body {
   background-blend-mode: lighten, normal, normal;
   color: #243447;
   transition: background 0.3s ease, color 0.3s ease;
+}
 
-  /* background-image removed; no direct background image */
-  /* background-image: url('/bg-professional-geometric.svg'), ...; */
-  /* background-size: cover, auto, auto, auto; */
-  /* background-repeat: no-repeat, no-repeat, no-repeat, no-repeat; */
-  /* background-position: center center, left top, right bottom, left bottom; */
+/* Layered geometric shapes overlay */
+body::before, body::after {
+  content: '';
+  position: fixed;
+  z-index: 0;
+  pointer-events: none;
+  transition: opacity 0.8s cubic-bezier(.77,.2,.05,1);
+}
+
+body::before {
+  top: -10vw; left: -10vw;
+  width: 65vw; height: 65vw;
+  background: linear-gradient(135deg, rgba(88,199,250,0.11) 60%, rgba(153,217,140,0.09) 100%);
+  clip-path: polygon(60% 0, 100% 40%, 80% 100%, 0 100%, 0 20%, 15% 0);
+  border-radius: 30% 60% 50% 70%/60% 50% 70% 30%;
+  animation: shapeFloat1 9s ease-in-out infinite alternate;
+}
+
+body::after {
+  bottom: -18vw; right: -12vw;
+  width: 49vw; height: 49vw;
+  background: linear-gradient(220deg, rgba(255,209,102,0.15) 50%, rgba(209,55,95,0.07) 100%);
+  clip-path: ellipse(50% 65% at 50% 50%);
+  border-radius: 60% 30% 60% 50%/50% 60% 30% 70%;
+  animation: shapeFloat2 10s ease-in-out infinite alternate;
+}
+
+/* Subtle floating animations for background shape overlays */
+@keyframes shapeFloat1 {
+  0% { transform: translateY(0) scale(1) rotate(0deg); }
+  35% { transform: translateY(18px) scale(1.02) rotate(2deg); }
+  65% { transform: translateY(-12px) scale(0.98) rotate(-1deg); }
+  100% { transform: translateY(0) scale(1) rotate(-1deg); }
+}
+@keyframes shapeFloat2 {
+  0% { transform: translateY(0) scale(1) rotate(0deg); }
+  40% { transform: translateY(-28px) scale(0.97) rotate(2deg); }
+  80% { transform: translateY(9px) scale(1.01) rotate(0deg); }
+  100% { transform: translateY(0) scale(1) rotate(-2deg); }
 }
 
 .App {
@@ -28,6 +63,8 @@ body {
   border-radius: 16px;
   box-shadow: 0 6px 32px rgba(47, 77, 112, 0.07), 0 1.5px 10px rgba(47, 77, 112, 0.03);
   transition: box-shadow 0.3s;
+  position: relative;
+  z-index: 1; /* Above decorative background */
 }
 
 .App:hover {
@@ -51,4 +88,10 @@ h1 {
   h1 {
     font-size: 1.35rem;
   }
+}
+
+/* Make sure content is above animated shapes */
+#root, .App {
+  position: relative;
+  z-index: 1;
 }
