@@ -1,43 +1,55 @@
 .task-item {
   display: flex;
   align-items: center;
-  padding: 10px 0;
-  border-bottom: 1px solid #eee;
-  font-size: 1.07rem;
-  background: none;
+  padding: 14px 10px;
+  margin: 10px 0;
+  background: #f6f8fa;
+  border-radius: 10px;
+  box-shadow: 0 2px 12px rgba(47,72,112,0.07);
+  font-size: 1.08rem;
+  transition: background 0.2s, box-shadow 0.25s, color 0.2s;
 }
 .task-item:last-child {
   border-bottom: none;
 }
 .task-item.completed .task-item-title {
   text-decoration: line-through;
-  color: #bbb;
+  color: #b2bac6;
+  opacity: 0.7;
+  transition: color 0.2s, opacity 0.2s;
 }
 .task-item-title {
   flex: 1;
   cursor: pointer;
-  padding-right: 12px;
+  padding-right: 18px;
   user-select: text;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  color: #263046;
+  transition: color 0.18s;
 }
 .task-item-actions {
   display: flex;
-  gap: 6px;
+  gap: 7px;
 }
 .task-item-edit-btn, .task-item-delete-btn, .task-item-edit-save, .task-item-edit-cancel {
-  background: #eee;
+  background: #e7ecf3;
   border: none;
-  border-radius: 4px;
-  padding: 3px 14px;
-  margin-left: 1px;
+  border-radius: 5px;
+  padding: 5px 15px;
+  margin-left: 2px;
   cursor: pointer;
-  transition: background 0.15s;
+  font-size: .95rem;
+  color: #2b4166;
+  transition: background 0.13s, color 0.13s, box-shadow 0.13s;
+  box-shadow: 0 1px 4px rgba(90, 110, 140, 0.07);
 }
 .task-item-edit-btn:hover, .task-item-edit-save:hover {
   background: #447be7;
   color: #fff;
 }
 .task-item-delete-btn:hover, .task-item-edit-cancel:hover {
-  background: #ee3a4b;
+  background: #e43a3a;
   color: #fff;
 }
 .task-item-edit {
@@ -48,7 +60,37 @@
 .task-item-edit-input {
   flex: 1;
   font-size: 1.06rem;
-  padding: 6px 10px;
-  border-radius: 5px;
-  border: 1px solid #bbb;
+  padding: 6px 12px;
+  border-radius: 7px;
+  border: 1px solid #bcc4d1;
+  background: #fff;
+  box-shadow: 0 0.5px 1.5px rgba(47,72,112,0.09);
+  transition: border 0.13s, background 0.14s;
+}
+.task-item-edit-input:focus {
+  outline: none;
+  border: 1.5px solid #447be7;
+  background: #eef4fb;
+}
+.task-item input[type="checkbox"] {
+  accent-color: #447be7;
+  width: 1.17em;
+  height: 1.17em;
+  margin-right: 11px;
+  box-shadow: 0 0 0 1.5px #b2bac6 inset;
+  border-radius: 3px;
+  transition: accent-color 0.09s;
+}
+@media (max-width: 700px) {
+  .task-item {
+    padding: 10px 5px;
+    font-size: 0.97rem;
+  }
+  .task-item-title {
+    padding-right: 6px;
+  }
+  .task-item-edit-input {
+    font-size: 0.99rem;
+    padding: 4px 8px;
+  }
 }
