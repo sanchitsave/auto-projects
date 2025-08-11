@@ -1,0 +1,99 @@
+/* Modal overlay */
+.task-modal-overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.28);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.task-modal {
+  background: #fff;
+  min-width: 320px;
+  width: 100%;
+  max-width: 400px;
+  border-radius: 10px;
+  box-shadow: 0 10px 32px 4px rgba(100,100,100,0.09);
+  padding: 32px 28px 18px 28px;
+  position: relative;
+  transition: border-color 0.2s;
+}
+
+.close-btn {
+  appearance: none;
+  border: none;
+  background: none;
+  font-size: 2rem;
+  position: absolute;
+  right: 20px;
+  top: 16px;
+  color: #888;
+  cursor: pointer;
+}
+
+.close-btn:focus {
+  outline: 2px solid #ffd600;
+}
+
+.task-modal form label {
+  display: block;
+  margin-bottom: 14px;
+  font-weight: 500;
+  color: #263238;
+}
+
+.task-modal input[type='text'],
+.task-modal input[type='date'],
+.task-modal select, .task-modal textarea {
+  width: 100%;
+  padding: 8px 10px;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  border: 1px solid #b0bec5;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-family: inherit;
+  box-sizing: border-box;
+  transition: border 0.1s;
+}
+
+.task-modal input[type='text']:focus,
+.task-modal input[type='date']:focus,
+.task-modal select:focus,
+.task-modal textarea:focus {
+  border: 1.5px solid #4786ff;
+  outline: none;
+}
+
+.task-modal textarea {
+  height: 68px;
+  resize: vertical;
+}
+
+.save-btn {
+  padding: 8px 24px;
+  margin-top: 8px;
+  appearance: none;
+  border: none;
+  border-radius: 5px;
+  background: dodgerblue;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.18s;
+}
+
+.save-btn:hover {
+  background: #205fd8;
+}
+
+/* Priority border colors are applied inline in the component. */
+
+@media (max-width: 540px) {
+  .task-modal {
+    max-width: 96vw;
+    padding: 18px 6vw 10px 6vw;
+  }
+}
