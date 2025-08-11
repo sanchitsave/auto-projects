@@ -5,11 +5,11 @@ import Footer from './components/Footer';
 
 function App() {
   return (
-    <div className="App" style={{ display: 'flex' }}>
+    <div className="App">
       <Header />
-      <div style={{ flex: 1, padding: '1rem' }}>
+      <div className="main-content">
         <h1>Welcome to My React App</h1>
-        <div style={{ margin: '1rem 0', display: 'flex', gap: '0.5rem' }}>
+        <div className="button-group">
           <button>Button 1</button>
           <button>Button 2</button>
           <button>Button 3</button>
