@@ -7,7 +7,7 @@ import Footer from "./components/Footer";
 
 function App() {
   return (
-    <div className="App">
+    <div className="App app-bg-image">
       <Header />
       <div className="app-layout-main">
         <aside className="app-sidenav">
@@ -24,7 +24,7 @@ function App() {
           <section className="app-secondary-images" style={{ display: 'flex', gap: 16, margin: '32px 0' }}>
             <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=400&q=80" alt="Lunch" style={{ maxWidth: 180, borderRadius: 12 }} />
             <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80" alt="Salad" style={{ maxWidth: 180, borderRadius: 12 }} />
-            <img src="https://images.unsplash.com/photo-1454023492550-5696f8ff10e1?auto=format&fit=crop&w=400&q=80" alt="Dessert" style={{ maxWidth: 180, borderRadius: 12 }} />
+            <img src="https://images.unsplash.com/photo-1454023492520-56d3401728ec?auto=format&fit=crop&w=400&q=80" alt="Dessert" style={{ maxWidth: 180, borderRadius: 12 }} />
           </section>
           <Menu />
           {/* Example professional button */}
