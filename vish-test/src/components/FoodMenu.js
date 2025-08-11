@@ -1,30 +1,53 @@
-import React from 'react';
+import React, { useState, useMemo } from 'react';
 import './FoodMenu.css';
+import menuData from '../data/foodMenu.json';
 
-const menuItems = [
-  { id: 1, name: 'Margherita Pizza', description: 'Classic pizza with tomato sauce, mozzarella, and basil.', price: 10 },
-  { id: 2, name: 'Veggie Burger', description: 'Delicious veggie patty with lettuce, tomato, and sauce.', price: 8 },
-  { id: 3, name: 'Pasta Alfredo', description: 'Creamy alfredo sauce tossed with fettuccine.', price: 12 },
-  { id: 4, name: 'Caesar Salad', description: 'Crisp romaine with tangy Caesar dressing.', price: 7 },
-];
+// Get unique categories from menuData
+default function getCategories(items) {
+  const categories = items.map((item) => item.category || 'Other');
+  return Array.from(new Set(categories));
+}
 
 const FoodMenu = () => {
+  // State for category filter
+  const [selectedCategory, setSelectedCategory] = useState('All');
+  const categories = useMemo(() => ['All', ...getCategories(menuData)], []);
+
+  const filteredItems = useMemo(
+    () =>
+      selectedCategory === 'All'
+        ? menuData
+        : menuData.filter((item) => (item.category || 'Other') === selectedCategory),
+    [selectedCategory]
+  );
+
   return (
     <section className="food-menu">
       <div className="food-menu-header">
         <h2 className="menu-title">Our Menu</h2>
         <p className="menu-subtitle">Fresh. Delicious. Made with Passion.</p>
       </div>
+      <div className="food-menu-categories">
+        {categories.map((cat) => (
+          <button
+            key={cat}
+            className={`food-cat-btn${selectedCategory === cat ? ' active' : ''}`}
+            onClick={() => setSelectedCategory(cat)}
+          >
+            {cat}
+          </button>
+        ))}
+      </div>
       <ul className="food-menu-list">
-        {menuItems.map(item => (
+        {filteredItems.map((item) => (
           <li key={item.id} className="menu-item card">
             <div className="menu-item-content">
               <div className="menu-item-header">
-                <h3 className="food-name animated-fade-in">{item.name}
-                  <span className="food-price">${item.price}</span>
-                </h3>
+                <h3 className="food-name animated-fade-in">{item.name}</h3>
+                <span className="food-price">${item.price}</span>
               </div>
               <p className="food-desc animated-fade-in-delay">{item.description}</p>
+              <img src={item.image} alt={item.name} className="food-img" style={{maxWidth:'120px',borderRadius:'8px',marginTop:'7px'}} />
               <button className="food-order-btn btn-animated">Order</button>
             </div>
           </li>
