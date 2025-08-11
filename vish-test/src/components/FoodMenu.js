@@ -3,7 +3,7 @@ import './FoodMenu.css';
 import menuData from '../data/foodMenu.json';
 
 // Get unique categories from menuData
-default function getCategories(items) {
+function getCategories(items) {
   const categories = items.map((item) => item.category || 'Other');
   return Array.from(new Set(categories));
 }
