@@ -1,7 +1,6 @@
 import React from "react";
 import "./App.css";
 import Menu from "./components/Menu";
-// Import Header, SideNavigation, and Footer
 import Header from "./components/Header";
 import SideNavigation from "./components/SideNavigation";
 import Footer from "./components/Footer";
@@ -10,12 +9,18 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <div className="App-content-layout">
-        <SideNavigation />
-        <div className="App-main">
+      <div className="app-layout-main">
+        <aside className="app-sidenav">
+          <SideNavigation />
+        </aside>
+        <main className="app-content">
           <h1>Welcome to My React App</h1>
+          {/* Optionally add an introduction section or a hero food image */}
+          <section className="app-hero-image">
+            <img src="/images/hero-food.jpg" alt="Delicious Food" className="hero-image" />
+          </section>
           <Menu />
-        </div>
+        </main>
       </div>
       <Footer />
     </div>
