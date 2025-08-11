@@ -7,11 +7,7 @@ function App() {
   return (
     <div className="App">
       <Header />
-      {/* Your main app content here */}
-      <main>
-        <h1>Welcome to the App</h1>
-        <p>This is the main content area.</p>
-      </main>
+      {/* Main content of the app can go here */}
       <Footer />
     </div>
   );
