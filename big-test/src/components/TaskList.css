@@ -1,0 +1,11 @@
+.task-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 16px;
+}
+.task-list-empty {
+  text-align: center;
+  color: #998;
+  font-style: italic;
+  margin: 32px 0;
+}
