@@ -1,6 +1,7 @@
 [
   {
     "id": 1,
+    "category": "Pizza",
     "name": "Spicy Paneer Tikka",
     "description": "Grilled cottage cheese cubes marinated in spicy yogurt masala, served with fresh mint chutney.",
     "price": 7.99,
@@ -8,6 +9,7 @@
   },
   {
     "id": 2,
+    "category": "Pizza",
     "name": "Classic Margherita Pizza",
     "description": "Wood-fired thin crust pizza topped with fresh tomato, mozzarella and basil.",
     "price": 9.49,
@@ -15,6 +17,7 @@
   },
   {
     "id": 3,
+    "category": "Curry",
     "name": "Thai Green Curry",
     "description": "Creamy coconut green curry with assorted veggies and jasmine rice.",
     "price": 10.75,
@@ -22,6 +25,7 @@
   },
   {
     "id": 4,
+    "category": "Brownie",
     "name": "Double Chocolate Brownie",
     "description": "Rich fudge brownie topped with melted chocolate and nuts.",
     "price": 5.00,
@@ -29,6 +33,7 @@
   },
   {
     "id": 5,
+    "category": "Salad",
     "name": "Fresh Greek Salad",
     "description": "Crisp greens, feta, olives, cucumber, tomato and red onion with a lemon-oregano dressing.",
     "price": 6.90,
@@ -36,13 +41,15 @@
   },
   {
     "id": 6,
+    "category": "Rice",
     "name": "Chicken Biryani",
     "description": "Aromatic long-grain rice layered with tender chicken, fried onions, saffron and Indian spices.",
     "price": 11.25,
-    "image": "https://images.unsplash.com/photo-1455619452474-d2be8b1e70cd?auto=format&fit=crop&w=400&q=80"
+    "image": "https://images.unsplash.com/photo-1455619452474-d2be8a1e70cd?auto=format&fit=crop&w=400&q=80"
   },
   {
     "id": 7,
+    "category": "Toast",
     "name": "Vegan Avocado Toast",
     "description": "Sourdough bread with smashed avocado, cherry tomato, microgreens & chili flakes.",
     "price": 5.99,
@@ -50,9 +57,42 @@
   },
   {
     "id": 8,
+    "category": "Pasta",
     "name": "Butter Garlic Shrimp Pasta",
     "description": "Linguine tossed in creamy garlic sauce with sautéed shrimp and herbs.",
     "price": 13.50,
     "image": "https://images.unsplash.com/photo-1504674900247-eca47a17b8f9?auto=format&fit=crop&w=400&q=80"
+  },
+  {
+    "id": 9,
+    "category": "Burgers",
+    "name": "Double Cheeseburger",
+    "description": "Juicy beef patties stacked with melted cheddar, lettuce, tomato, onions, and secret sauce.",
+    "price": 8.99,
+    "image": "https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=400&q=80"
+  },
+  {
+    "id": 10,
+    "category": "Burgers",
+    "name": "Veggie Burger",
+    "description": "Crispy patty made with black beans and veggies, topped with lettuce, tomato, and a creamy sauce.",
+    "price": 7.50,
+    "image": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=400&q=80"
+  },
+  {
+    "id": 11,
+    "category": "Soups",
+    "name": "Tomato Basil Soup",
+    "description": "Velvety tomato soup simmered with fresh basil and served with garlic croutons.",
+    "price": 4.99,
+    "image": "https://images.unsplash.com/photo-1504674900247-ecd3df9cc836?auto=format&fit=crop&w=400&q=80"
+  },
+  {
+    "id": 12,
+    "category": "Soups",
+    "name": "Chicken Noodle Soup",
+    "description": "Classic homemade soup with chicken, noodles, carrots, and celery in savory broth.",
+    "price": 5.50,
+    "image": "https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80"
   }
 ]
