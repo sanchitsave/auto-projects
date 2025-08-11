@@ -1,6 +1,6 @@
 .side-nav {
   width: 200px;
-  min-height: 100vh;
+  min-height: 100%;
   background: linear-gradient(180deg,#23305e 0%,#294776 100%);
   color: #f4f7fb;
   padding-top: 24px;
@@ -10,6 +10,9 @@
   position: relative;
   border-radius: 14px 0 0 14px;
   font-family: 'Inter', Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 .side-nav ul {
   list-style: none;
@@ -26,7 +29,7 @@
   display: block;
   border-radius: 8px;
   font-weight: 600;
-  letter-spacing: 0.03em;
+  letter-spacing: .03em;
   font-size: 1.07rem;
   transition: background 0.15s, color 0.25s;
 }
@@ -48,7 +51,7 @@
 }
 @media (max-width: 600px) {
   .side-nav {
-    font-size: 0.95rem;
+    font-size: .95rem;
     border-radius: 0;
     padding-top: 12px;
     padding-bottom: 10px;
