@@ -1,13 +1,15 @@
 .side-nav {
-  width: 180px;
+  width: 200px;
   min-height: 100vh;
-  background: #222e3c;
-  color: #fff;
-  padding-top: 30px;
-  box-shadow: 2px 0 7px rgba(0,0,0,0.09);
-  position: fixed;
-  left: 0;
-  top: 0;
+  background: linear-gradient(180deg,#23305e 0%,#294776 100%);
+  color: #f4f7fb;
+  padding-top: 34px;
+  padding-bottom: 34px;
+  padding-left: 16px;
+  box-shadow: 1.5px 2px 14px rgba(34,44,74,0.09);
+  position: relative;
+  border-radius: 14px 0 0 14px;
+  font-family: 'Inter', Arial, sans-serif;
 }
 .side-nav ul {
   list-style: none;
@@ -15,16 +17,20 @@
   margin: 0;
 }
 .side-nav li {
-  margin: 25px 0;
+  margin: 28px 0;
 }
 .side-nav a {
-  color: #fff;
+  color: #f2f6fc;
   text-decoration: none;
-  padding: 10px 24px;
+  padding: 13px 28px;
   display: block;
-  border-radius: 4px;
-  transition: background 0.2s;
+  border-radius: 8px;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  font-size: 1.07rem;
+  transition: background 0.15s, color 0.25s;
 }
 .side-nav a:hover {
-  background: #294064;
+  background: #3051a0;
+  color: #ffffff;
 }
