@@ -1,14 +1,12 @@
 import React from 'react';
 import './App.css';
-import Header from './components/Header';
-import Footer from './components/Footer';
+import Button from './components/Button';
 
 function App() {
   return (
     <div className="App">
-      <Header />
-      {/* Main content of the app can go here */}
-      <Footer />
+      <h1>Welcome to React App</h1>
+      <Button>Click Me</Button>
     </div>
   );
 }
