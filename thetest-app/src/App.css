@@ -19,7 +19,6 @@ body {
 }
 
 .app-content-layout {
-  flex: 1 0 auto;
   display: flex;
   flex-direction: row;
   width: 100%;
@@ -31,7 +30,6 @@ body {
 }
 
 .app-sidebar {
-  flex: 0 0 220px;
   min-width: 180px;
   background: transparent;
   padding-left: 0.5rem;
@@ -55,7 +53,6 @@ body {
     padding: 0 10px;
   }
   .app-sidebar {
-    flex-basis: auto;
     min-width: unset;
     width: 100%;
     padding: 0;
