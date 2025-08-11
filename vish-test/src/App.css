@@ -2,12 +2,39 @@
   text-align: center;
   min-height: 100vh;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
   background-color: #f7f7f7;
+}
+
+.main-content {
+  flex: 1;
+  width: 100%;
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: white;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.05);
+  border-radius: 18px;
 }
 
 h1 {
   font-family: Arial, Helvetica, sans-serif;
   color: #333;
+  margin-bottom: 2rem;
+}
+
+header, footer {
+  width: 100%;
+  padding: 1rem 0;
+  background: #e6e6fa;
+  color: #333;
+}
+
+footer {
+  border-top: 1px solid #dedede;
+  margin-top: 3rem;
+  font-size: 1rem;
+  font-weight: 500;
 }
