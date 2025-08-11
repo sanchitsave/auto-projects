@@ -1,17 +1,12 @@
 import React from 'react';
-import Header from './Header';
-import Footer from './Footer';
 import './App.css';
+import Button from './components/Button';
 
 function App() {
   return (
     <div className="App">
-      <Header />
-      <main>
-        <h1>Welcome to the App!</h1>
-        <p>This is the main content of the app.</p>
-      </main>
-      <Footer />
+      <h1>Welcome to the App</h1>
+      <Button onClick={() => alert('Button clicked!')}>Click Me</Button>
     </div>
   );
 }
