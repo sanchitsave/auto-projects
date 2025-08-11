@@ -32,6 +32,7 @@ const FoodMenu = () => {
           <button
             key={cat}
             className={`food-cat-btn${selectedCategory === cat ? ' active' : ''}`}
+            type="button"
             onClick={() => setSelectedCategory(cat)}
           >
             {cat}
