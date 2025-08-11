@@ -2,18 +2,18 @@ import React, { useState } from 'react';
 import './Menu.css';
 
 const menuItems = [
-  { id: 1, name: 'Margherita Pizza', description: 'Classic pizza with tomato sauce, mozzarella, and basil.', price: '$10.99' },
-  { id: 2, name: 'Caesar Salad', description: 'Romaine, parmesan, homemade croutons, and Caesar dressing.', price: '$8.99' },
-  { id: 3, name: 'Spaghetti Carbonara', description: 'Pasta with pancetta, egg, pecorino cheese, and black pepper.', price: '$12.99' },
-  { id: 4, name: 'Grilled Salmon', description: 'Fresh salmon fillet with lemon butter sauce.', price: '$16.99' },
-  { id: 5, name: 'Chocolate Lava Cake', description: 'Warm chocolate cake with a gooey center, served with vanilla ice cream.', price: '$6.99' },
+  { id: 1, name: 'Margherita Pizza', description: 'Classic pizza with tomato sauce, mozzarella, and basil.', price: '$10.99', img: 'https://images.unsplash.com/photo-1542281286-9e0a16bb7366?auto=format&fit=crop&w=400&q=80' },
+  { id: 2, name: 'Caesar Salad', description: 'Romaine, parmesan, homemade croutons, and Caesar dressing.', price: '$8.99', img: 'https://images.unsplash.com/photo-1464306076886-debca5e8a6b0?auto=format&fit=crop&w=400&q=80' },
+  { id: 3, name: 'Spaghetti Carbonara', description: 'Pasta with pancetta, egg, pecorino cheese, and black pepper.', price: '$12.99', img: 'https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=400&q=80' },
+  { id: 4, name: 'Grilled Salmon', description: 'Fresh salmon fillet with lemon butter sauce.', price: '$16.99', img: 'https://images.unsplash.com/photo-1519864602031-c1e4010a4ee4?auto=format&fit=crop&w=400&q=80' },
+  { id: 5, name: 'Chocolate Lava Cake', description: 'Warm chocolate cake with a gooey center, served with vanilla ice cream.', price: '$6.99', img: 'https://images.unsplash.com/photo-1519864602031-c1e4010a4ee4?auto=format&fit=crop&w=400&q=80' },
   // Add more items to demonstrate pagination,
-  { id: 6, name: 'Chicken Alfredo', description: 'Creamy alfredo sauce tossed with grilled chicken and pasta.', price: '$13.99' },
-  { id: 7, name: 'Bruschetta', description: 'Grilled bread garlic, tomatoes, olive oil, and basil.', price: '$7.49' },
-  { id: 8, name: 'Greek Salad', description: 'Fresh vegetables, feta cheese, kalamata olives, and house dressing.', price: '$9.49' },
-  { id: 9, name: 'Tiramisu', description: 'Classic Italian coffee-flavored dessert.', price: '$5.99' },
-  { id: 10, name: 'Penne Arrabbiata', description: 'Spicy tomato sauce with penne pasta.', price: '$11.49' },
-  { id: 11, name: 'Garlic Bread', description: 'Crusty bread with garlic butter.', price: '$4.99' },
+  { id: 6, name: 'Chicken Alfredo', description: 'Creamy alfredo sauce tossed with grilled chicken and pasta.', price: '$13.99', img: 'https://images.unsplash.com/photo-1502741126161-b048400d98b2?auto=format&fit=crop&w=400&q=80' },
+  { id: 7, name: 'Bruschetta', description: 'Grilled bread garlic, tomatoes, olive oil, and basil.', price: '$7.49', img: 'https://images.unsplash.com/photo-1523987355523-c7b5b0723cdd?auto=format&fit=crop&w=400&q=80' },
+  { id: 8, name: 'Greek Salad', description: 'Fresh vegetables, feta cheese, kalamata olives, and house dressing.', price: '$9.49', img: 'https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=400&q=80' },
+  { id: 9, name: 'Tiramisu', description: 'Classic Italian coffee-flavored dessert.', price: '$5.99', img: 'https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=400&q=80' },
+  { id: 10, name: 'Penne Arrabbiata', description: 'Spicy tomato sauce with penne pasta.', price: '$11.49', img: 'https://images.unsplash.com/photo-1519864602031-c1e4010a4ee4?auto=format&fit=crop&w=400&q=80' },
+  { id: 11, name: 'Garlic Bread', description: 'Crusty bread with garlic butter.', price: '$4.99', img: 'https://images.unsplash.com/photo-1502741126161-b048400d98b2?auto=format&fit=crop&w=400&q=80' },
 ];
 
 const ITEMS_PER_PAGE = 5;
@@ -40,6 +40,7 @@ function Menu() {
       <ul className="menu-list">
         {currentItems.map(item => (
           <li key={item.id} className="menu-item">
+            <img src={item.img} alt={item.name} className="menu-item-image" />
             <div className="menu-title-price">
               <span className="menu-name">{item.name}</span>
               <span className="menu-price">{item.price}</span>
