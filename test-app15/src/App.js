@@ -11,6 +11,9 @@ function App() {
       <Header />
       <h1>Welcome to My React App</h1>
       <button>Click Me</button>
+      {/* Added buttons below as per request */}
+      <button>Button 1</button>
+      <button>Button 2</button>
       <Footer />
     </div>
   );
