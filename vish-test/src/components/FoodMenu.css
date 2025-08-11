@@ -1,78 +1,152 @@
-.food-menu-section {
-  padding: 40px 14vw 110px 14vw;
-  background: #fff9f3;
+.food-menu {
+  padding: 40px 6vw 80px 6vw;
+  background: linear-gradient(115deg, #f9fafc 70%, #ffe8b3 100%);
   min-height: 60vh;
+  border-radius: 20px;
+  max-width: 800px;
+  margin: 40px auto;
+  box-shadow: 0 6px 40px rgba(0,0,0,0.09);
+  animation: foodMenuFadeIn 1s cubic-bezier(.5,.1,.5,1.1);
+}
+
+@keyframes foodMenuFadeIn {
+  from {
+    filter: blur(12px);
+    opacity: 0;
+    transform: translateY(36px);
+  }
+  to {
+    filter: none;
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.food-menu-header {
+  text-align: center;
+  margin-bottom: 42px;
 }
 
 .menu-title {
-  text-align: center;
-  background: linear-gradient(90deg, #ffe259, #ffa751);
+  font-size: 2.3rem;
+  font-weight: 800;
+  background: linear-gradient(90deg, #ffe259 10%, #ffa751 90%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   text-fill-color: transparent;
-  font-size: 2.1rem;
-  font-weight: 800;
-  letter-spacing: 1px;
-  margin-bottom: 36px;
+  margin-bottom: 7px;
+  letter-spacing: 2px;
 }
 
-.food-menu-grid {
+.menu-subtitle {
+  color: #b9974f;
+  font-size: 1.13rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+  letter-spacing: 0.8px;
+}
+
+.food-menu-list {
   display: grid;
-  grid-gap: 32px;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+  gap: 30px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
-.food-card {
-  background: #fafbfd;
+.menu-item.card {
+  background: #fffef9;
   border-radius: 18px;
-  box-shadow: 0 6px 30px rgba(255,195,66,0.10);
-  padding: 22px 18px 20px 18px;
+  box-shadow: 0 6px 24px rgba(236, 203, 80, 0.12);
+  padding: 30px 22px 24px 22px;
   text-align: center;
-  transition: transform 0.16s, box-shadow 0.16s;
   position: relative;
   cursor: pointer;
+  will-change: transform, box-shadow;
+  transition: box-shadow 0.35s cubic-bezier(.5,.14,.46,1.1), transform 0.22s cubic-bezier(.61,-0.01,.51,1.01);
+  animation: menuEntry 0.7s cubic-bezier(.37,1.39,.46,.84) both;
 }
 
-.food-card:hover {
-  box-shadow: 0 12px 32px rgba(255,195,66,0.16);
-  transform: translateY(-7px) scale(1.04);
+@keyframes menuEntry {
+  from {
+    opacity: 0;
+    transform: scale(0.94) translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
 }
 
-.food-image {
-  width: 135px;
-  height: 110px;
+.menu-item.card:hover {
+  box-shadow: 0 14px 38px rgba(255,190,22,0.20), 0 2px 6px rgba(180,150,76,0.10);
+  transform: translateY(-6px) scale(1.025);
+  z-index: 2;
+}
+
+.menu-item-content {
   margin-bottom: 18px;
-  border-radius: 12px;
-  object-fit: cover;
-  box-shadow: 0 3px 12px rgba(70,70,70,0.07);
 }
 
 .food-name {
-  font-size: 1.15rem;
+  font-size: 1.22rem;
   font-weight: 700;
-  margin-top: 8px;
-  margin-bottom: 4px;
   color: #e59b23;
-}
-
-.food-desc {
-  font-size: 0.96rem;
-  color: #777;
-  margin-bottom: 12px;
-  margin-top: 4px;
+  margin-bottom: 3px;
+  letter-spacing: 0.7px;
 }
 
 .food-price {
-  background: #ffde59;
+  background: #ffe259;
   color: #222;
-  padding: 7px 15px;
+  padding: 6px 15px;
   border-radius: 13px;
   font-weight: 700;
   font-size: 1.05rem;
   letter-spacing: 1px;
-  position: absolute;
-  bottom: 17px;
-  left: 50%;
-  transform: translateX(-50%);
+  margin-left: 14px;
+  box-shadow: 0 2px 8px rgba(238,216,72,0.13);
+}
+
+.food-desc {
+  font-size: 1.07rem;
+  color: #746a5d;
+  margin-bottom: 16px;
+  line-height: 1.43;
+}
+
+.food-order-btn {
+  background: linear-gradient(90deg, #ffa751, #ffe259);
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 11px 22px;
+  cursor: pointer;
+  outline: none;
+  box-shadow: 0 4px 18px rgba(252,193,43,0.10);
+  letter-spacing: 1px;
+  transition: background 0.25s, box-shadow 0.23s, transform 0.22s;
+  animation: btnEnter 0.5s 0.22s cubic-bezier(.37,1.39,.46,.84) both;
+}
+
+.food-order-btn:hover {
+  background: linear-gradient(90deg, #ffe259, #ffa751);
+  color: #ad7c1c;
+  box-shadow: 0 9px 26px rgba(255,202,44,0.18);
+  transform: scale(1.08);
+}
+
+@keyframes btnEnter {
+  from {
+    opacity: 0;
+    transform: scale(0.9) translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
 }
