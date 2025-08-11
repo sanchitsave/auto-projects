@@ -3,8 +3,9 @@ import React from 'react';
 function App() {
   return (
     <div className="App">
-      {/* Existing content */}
-      <button>Click me</button>
+      <h1>Hello, world!</h1>
+      {/* Added input textbox below */}
+      <input type="text" placeholder="Type here..." />
     </div>
   );
 }
