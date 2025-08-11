@@ -1,0 +1,33 @@
+.sidenav {
+  width: 200px;
+  height: 100vh;
+  background: #222c36;
+  color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding-top: 20px;
+  box-shadow: 2px 0 8px rgba(0,0,0,0.05);
+}
+
+.sidenav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidenav li {
+  margin: 20px 0;
+}
+
+.sidenav a {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 20px;
+  display: block;
+  border-radius: 4px;
+  transition: background 0.2s;
+}
+
+.sidenav a:hover {
+  background: #314053;
+}
