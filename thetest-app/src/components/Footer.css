@@ -1,13 +1,16 @@
 /* Footer.css - Basic styling for the Footer component */
 
 .footer {
-  background-color: #282c34;
-  color: #fff;
-  padding: 16px 0;
+  background: linear-gradient(90deg,#232846 0%,#35436b 100%);
+  color: #f9fafb;
+  padding: 20px 0 16px 0;
   text-align: center;
-  font-size: 1rem;
-  position: fixed;
+  font-size: 1.13rem;
+  position: relative;
   bottom: 0;
   width: 100%;
-  box-shadow: 0 -2px 8px rgba(0,0,0,0.08);
+  box-shadow: 0 -3px 16px rgba(44,54,94,0.13);
+  font-family: 'Inter', Arial, sans-serif;
+  border-radius: 0 0 14px 14px;
+  letter-spacing: 0.04em;
 }
