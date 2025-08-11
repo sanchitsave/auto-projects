@@ -12,6 +12,15 @@ body {
   background-blend-mode: lighten, normal, normal;
   color: #243447;
   transition: background 0.3s ease, color 0.3s ease;
+
+  /* Add/Override: background image for the app */
+  background-image: url('/bg-professional-geometric.svg'),
+    linear-gradient(120deg, #e9f1f7 0%, #f4f6fb 100%),
+    radial-gradient(circle at 80% 0%, #d0e8f2 0%, transparent 70%),
+    radial-gradient(circle at 20% 100%, #b9d6e7 0%, transparent 70%);
+  background-size: cover, auto, auto, auto;
+  background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
+  background-position: center center, left top, right bottom, left bottom;
 }
 
 .App {
@@ -20,7 +29,7 @@ body {
   padding: 32px;
   background: #fff;
   border-radius: 16px;
-  box-shadow: 0 6px 32px rgba(47, 72, 112, 0.07), 0 1.5px 10px rgba(47, 72, 112, 0.03);
+  box-shadow: 0 6px 32px rgba(47, 77, 112, 0.07), 0 1.5px 10px rgba(47, 77, 112, 0.03);
   transition: box-shadow 0.3s;
 }
 
