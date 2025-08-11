@@ -1,11 +1,10 @@
 import React from 'react';
 import './App.css';
 
-// Importing components (Ensure these components exist in your project)
-// If not, you will need to implement them or adjust accordingly
-import Header from './Header';
-import Footer from './Footer';
-import FoodMenu from './FoodMenu';
+// Importing components from the components directory
+import Header from './components/Header';
+import Footer from './components/Footer';
+import FoodMenu from './components/FoodMenu';
 
 function App() {
   return (
