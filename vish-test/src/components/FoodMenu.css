@@ -30,13 +30,16 @@
 .menu-title {
   font-size: 2.3rem;
   font-weight: 800;
-  background: linear-gradient(90deg, #ffe259 10%, #ffa751 90%);
+  background: linear-gradient(90deg, #ffe259 10%, #faa751 90%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   text-fill-color: transparent;
   margin-bottom: 7px;
   letter-spacing: 2px;
+  position: relative;
+  display: inline-block;
+  animation: animated-fade-in 0.9s 0.18s backwards;
 }
 
 .menu-subtitle {
@@ -45,12 +48,14 @@
   font-weight: 600;
   margin-bottom: 12px;
   letter-spacing: 0.8px;
+  opacity: 0.95;
+  animation: animated-fade-in 0.7s 0.36s backwards;
 }
 
 .food-menu-list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
-  gap: 30px;
+  gap: 32px 32px;
   list-style: none;
   padding: 0;
   margin: 0;
@@ -68,7 +73,6 @@
   transition: box-shadow 0.35s cubic-bezier(.5,.14,.46,1.1), transform 0.22s cubic-bezier(.61,-0.01,.51,1.01);
   animation: menuEntry 0.7s cubic-bezier(.37,1.39,.46,.84) both;
 }
-
 @keyframes menuEntry {
   from {
     opacity: 0;
@@ -81,15 +85,20 @@
 }
 
 .menu-item.card:hover {
-  box-shadow: 0 14px 38px rgba(255,190,22,0.20), 0 2px 6px rgba(180,150,76,0.10);
-  transform: translateY(-6px) scale(1.025);
+  box-shadow: 0 14px 38px rgba(255,200,34,0.20), 0 2px 6px rgba(180,150,76,0.10);
+  transform: translateY(-8px) scale(1.025);
   z-index: 2;
 }
 
 .menu-item-content {
-  margin-bottom: 18px;
+  margin-bottom: 18px;  
 }
-
+.menu-item-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 13px;
+}
 .food-name {
   font-size: 1.22rem;
   font-weight: 700;
@@ -97,7 +106,6 @@
   margin-bottom: 3px;
   letter-spacing: 0.7px;
 }
-
 .food-price {
   background: #ffe259;
   color: #222;
@@ -108,17 +116,19 @@
   letter-spacing: 1px;
   margin-left: 14px;
   box-shadow: 0 2px 8px rgba(238,216,72,0.13);
+  transition: background 0.33s cubic-bezier(.5,.16,.41,1.18);
 }
-
+.food-item.card:hover .food-price {
+  background: #fffbe7;
+}
 .food-desc {
   font-size: 1.07rem;
   color: #746a5d;
   margin-bottom: 16px;
   line-height: 1.43;
 }
-
 .food-order-btn {
-  background: linear-gradient(90deg, #ffa751, #ffe259);
+  background: linear-gradient(90deg, #ffe259, #faa751, #ffe259);
   color: #fff;
   border: none;
   border-radius: 25px;
@@ -127,19 +137,17 @@
   padding: 11px 22px;
   cursor: pointer;
   outline: none;
-  box-shadow: 0 4px 18px rgba(252,193,43,0.10);
+  box-shadow: 0 4px 18px rgba(252,193,67,0.10);
   letter-spacing: 1px;
   transition: background 0.25s, box-shadow 0.23s, transform 0.22s;
   animation: btnEnter 0.5s 0.22s cubic-bezier(.37,1.39,.46,.84) both;
 }
-
 .food-order-btn:hover {
-  background: linear-gradient(90deg, #ffe259, #ffa751);
+  background: linear-gradient(90deg, #ffe259 70%, #faa751);
   color: #ad7c1c;
   box-shadow: 0 9px 26px rgba(255,202,44,0.18);
   transform: scale(1.08);
 }
-
 @keyframes btnEnter {
   from {
     opacity: 0;
@@ -149,4 +157,29 @@
     opacity: 1;
     transform: scale(1) translateY(0);
   }
+}
+
+/* Animations for fade-in on names and descriptions */
+.animated-fade-in {
+  opacity:0;
+  animation: animated-fade-in 0.8s 0.12s forwards;
+}
+.animated-fade-in-delay {
+  opacity:0;
+  animation: animated-fade-in 0.8s 0.32s forwards;
+}
+@keyframes animated-fade-in {
+  from {
+    transform: translateY(22px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.btn-animated {
+  opacity: 0;
+  animation: btnEnter 0.6s 0.45s forwards;
 }
