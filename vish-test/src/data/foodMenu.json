@@ -1,0 +1,58 @@
+[
+  {
+    "id": 1,
+    "name": "Spicy Paneer Tikka",
+    "description": "Grilled cottage cheese cubes marinated in spicy yogurt masala, served with fresh mint chutney.",
+    "price": 7.99,
+    "image": "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=400&q=80"
+  },
+  {
+    "id": 2,
+    "name": "Classic Margherita Pizza",
+    "description": "Wood-fired thin crust pizza topped with fresh tomato, mozzarella and basil.",
+    "price": 9.49,
+    "image": "https://images.unsplash.com/photo-1542281286-9e0a16bb7366?auto=format&fit=crop&w=400&q=80"
+  },
+  {
+    "id": 3,
+    "name": "Thai Green Curry",
+    "description": "Creamy coconut green curry with assorted veggies and jasmine rice.",
+    "price": 10.75,
+    "image": "https://images.unsplash.com/photo-1502741338009-cac2772e18bc?auto=format&fit=crop&w=400&q=80"
+  },
+  {
+    "id": 4,
+    "name": "Double Chocolate Brownie",
+    "description": "Rich fudge brownie topped with melted chocolate and nuts.",
+    "price": 5.00,
+    "image": "https://images.unsplash.com/photo-1519864600265-abb23847ef2c?auto=format&fit=crop&w=400&q=80"
+  },
+  {
+    "id": 5,
+    "name": "Fresh Greek Salad",
+    "description": "Crisp greens, feta, olives, cucumber, tomato and red onion with a lemon-oregano dressing.",
+    "price": 6.90,
+    "image": "https://images.unsplash.com/photo-1432139555190-58524dae6a55?auto=format&fit=crop&w=400&q=80"
+  },
+  {
+    "id": 6,
+    "name": "Chicken Biryani",
+    "description": "Aromatic long-grain rice layered with tender chicken, fried onions, saffron and Indian spices.",
+    "price": 11.25,
+    "image": "https://images.unsplash.com/photo-1455619452474-d2be8b1e70cd?auto=format&fit=crop&w=400&q=80"
+  },
+  {
+    "id": 7,
+    "name": "Vegan Avocado Toast",
+    "description": "Sourdough bread with smashed avocado, cherry tomato, microgreens & chili flakes.",
+    "price": 5.99,
+    "image": "https://images.unsplash.com/photo-1523987355523-c7b5b0723c6a?auto=format&fit=crop&w=400&q=80"
+  },
+  {
+    "id": 8,
+    "name": "Butter Garlic Shrimp Pasta",
+    "description": "Linguine tossed in creamy garlic sauce with sautéed shrimp and herbs.",
+    "price": 13.50,
+    "image": "https://images.unsplash.com/photo-1504674900247-eca47a17b8f9?auto=format&fit=crop&w=400&q=80"
+  }
+]
