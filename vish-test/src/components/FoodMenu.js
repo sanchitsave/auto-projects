@@ -19,12 +19,14 @@ const FoodMenu = () => {
         {menuItems.map(item => (
           <li key={item.id} className="menu-item card">
             <div className="menu-item-content">
-              <h3 className="food-name">{item.name}
-                <span className="food-price">${item.price}</span>
-              </h3>
-              <p className="food-desc">{item.description}</p>
+              <div className="menu-item-header">
+                <h3 className="food-name animated-fade-in">{item.name}
+                  <span className="food-price">${item.price}</span>
+                </h3>
+              </div>
+              <p className="food-desc animated-fade-in-delay">{item.description}</p>
+              <button className="food-order-btn btn-animated">Order</button>
             </div>
-            <button className="food-order-btn">Order</button>
           </li>
         ))}
       </ul>
