@@ -2,23 +2,35 @@
   width: 100%;
   background: linear-gradient(90deg,#28344a 0%,#23305e 100%);
   color: #fff;
-  padding: 28px 0 22px 0;
-  font-size: 2rem;
-  letter-spacing: 2px;
+  padding: 32px 0 22px 0;
+  font-size: 2.2rem;
+  letter-spacing: 1.5px;
   font-family: 'Inter', Arial, sans-serif;
   font-weight: 700;
-  box-shadow: 0 6px 22px rgba(34,44,74,0.13);
+  text-align: center;
+  box-shadow: 0 4px 24px rgba(40,52,74,0.13);
+  border-radius: 20px 20px 0 0;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  border-radius: 14px 14px 0 0;
+  gap: 6px;
+}
+.app-header .subtitle {
+  font-size: 1rem;
+  color: #f0f2fa;
+  font-family: 'Inter', Arial, sans-serif;
+  letter-spacing: 0.13em;
+  font-weight: 400;
+  margin-top: 4px;
+  opacity: 0.82;
 }
 
 @media (max-width: 600px) {
   .app-header {
     padding-left: 8px;
     padding-right: 8px;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     text-align: center;
   }
 }
