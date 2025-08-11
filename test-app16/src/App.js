@@ -3,6 +3,8 @@ import './App.css';
 import TodoList from './components/TodoList';
 import TodoForm from './components/TodoForm';
 import initialTodos from './data/todos.json';
+import Header from './components/Header';
+import Footer from './components/Footer';
 
 function App() {
   const [todos, setTodos] = useState(initialTodos);
@@ -44,6 +46,7 @@ function App() {
 
   return (
     <div className="app-container">
+      <Header />
       <h1>TODO List</h1>
       <TodoForm onAddTodo={addTodo} editingTodo={editingTodo} onUpdateTodo={updateTodo} />
       <TodoList
@@ -52,6 +55,7 @@ function App() {
         onDelete={deleteTodo}
         onEdit={editTodo}
       />
+      <Footer />
     </div>
   );
 }
